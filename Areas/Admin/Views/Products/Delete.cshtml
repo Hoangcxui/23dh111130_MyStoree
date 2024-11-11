@@ -1,0 +1,19 @@
+﻿@model _23dh111130_MyStore.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+<h3>xóa nhé</h3>
+
+ @Html.Partial("PVProdInfo",Model)
+    
+        <div style="padding:10px">
+            @Html.ActionLink("xoa", "Delete", new { id = Model.ProductID },
+                new { @class = "btn btn-primary" })
+            @Html.ActionLink("Quay lại danh sách", "Index", null,
+                new { @class = "btn btn-primary" })
+        </div>
+    
